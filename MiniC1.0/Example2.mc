@@ -1,6 +1,4 @@
-let swapf = ref 0 in
-	swapf :=
-	(funf swap [n,m] =>
+let swapf = ref (funf swap [n,m] =>
 		let x1 = ref n in
 		let x2 = ref m in
 		let x3 = ref (!x2) in
@@ -8,6 +6,8 @@ let swapf = ref 0 in
 			x1 := !x3
 		end
 		end
-		end);
-	!swapf <+> 3 <+> 4
+		end) in
+	!swapf <+> 10 <+> 300
+end
+end
 end

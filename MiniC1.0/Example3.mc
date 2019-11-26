@@ -1,8 +1,13 @@
-let x = ref 0 in
-	let y = ref 10 in
-		let z = ref (!y) in
-			y := !x;
-			x := !z
-		end
-	end
+let x = ref 2 in
+let y = ref 3 in
+let pot = ref (fun [n,m] =>
+    	      	let res = ref (!n) in
+		    while (not ((!m) == 1)) {
+		    	  res := (!res)*(!n);
+		    	  m := pred(!m)
+		    }
+		end)
+	in !pot <+> x <+> y
+end
+end
 end
